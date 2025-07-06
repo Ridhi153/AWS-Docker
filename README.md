@@ -1,4 +1,4 @@
-//vpc:
+//vpc: ----------------------------ubuntu:AMI
 create vpc -12.0.0.0/16 
 create internetgateway
 create subnets -12.0.0.0/20-public
@@ -14,7 +14,7 @@ ssh -i "aws_privatekey_ec2.pem" ec2-user@<EC2-PUBLIC-IP>
  connected to private...
 
 
- //Docker
+ //Docker -----------------ubuntu AMI
 🐳 Step 3: Install Docker on EC2
 
 sudo apt update
