@@ -14,6 +14,32 @@ ssh -i "aws_privatekey_ec2.pem" ec2-user@<EC2-PUBLIC-IP>
  connected to private...
 
 
+import java.util.Random;
+
+public class RandomNumberGenerator {
+
+    // Generates 'count' random numbers between 'min' and 'max'
+    public void generateRandomNumbers(int count, int min, int max) {
+        Random random = new Random();
+
+        System.out.println("Generating " + count + " random numbers between " + min + " and " + max + ":");
+
+        for (int i = 0; i < count; i++) {
+            int randomNumber = random.nextInt((max - min) + 1) + min;
+            System.out.println("Random Number " + (i + 1) + ": " + randomNumber);
+        }
+    }
+
+    public static void main(String[] args) {
+        RandomNumberGenerator rng = new RandomNumberGenerator();
+        
+        // Example: Generate 5 numbers between 10 and 100
+        rng.generateRandomNumbers(5, 10, 100);
+    }
+}
+
+
+
  //Docker -----------------ubuntu AMI
 🐳 Step 3: Install Docker on EC2
 
