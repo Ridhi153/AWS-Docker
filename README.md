@@ -51,3 +51,4 @@ docker build -t my-app .
 🚀 Step 7: Run the Container
 
 docker run -d -p 3000:3000 my-app
+https://<ec2-ip>:3000
